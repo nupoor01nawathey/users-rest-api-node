@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use('/api', require('./routes/users'));
 
 // db setup
-mongoose.connect('mongodb://localhost:27017/usersAPI');
+mongoose.connect('mongodb://localhost:27017/usersAPI', { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 
 // setup port
